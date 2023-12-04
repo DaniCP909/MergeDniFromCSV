@@ -15,6 +15,8 @@ return array(
     'Symfony\\Component\\String\\' => array($vendorDir . '/symfony/string'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'League\\Csv\\' => array($vendorDir . '/league/csv/src'),
+    'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Dcorr\\MergeDniFromCsv\\' => array($baseDir . '/src'),
 );
