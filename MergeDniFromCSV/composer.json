@@ -1,0 +1,21 @@
+{
+    "name": "dcorr/merge-dni-from-csv",
+    "require": {
+        "league/csv": "9.x-dev",
+        "symfony/console": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dcorr\\MergeDniFromCsv\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DaniCP909",
+            "email": "d.corredorpadrino@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^6.4"
+    }
+}
