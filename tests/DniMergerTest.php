@@ -61,12 +61,10 @@ final class DniMergerTest extends TestCase
         $this->assertSame($expected, $this->dniMerger->isNieValidable($input));
     }
 
-    public function testComputeDni() : void
+    #[DataProvider('dniAndCharProvider')]
+    public function testComputeDni(string $input, string $expected) : void
     {
-        $this->assertEquals('D', $this->dniMerger->computeChecksumDNI('23456789'));
-        $this->assertEquals('G', $this->dniMerger->computeChecksumDNI('45678901'));
-        $this->assertEquals('X', $this->dniMerger->computeChecksumDNI('78901234'));
-        $this->assertEquals('', $this->dniMerger->computeChecksumDNI('34'));
+        $this->assertEquals($expected, $this->dniMerger->computeChecksumDNI($input));
     }
 
 }
