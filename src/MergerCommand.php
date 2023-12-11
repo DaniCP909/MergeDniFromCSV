@@ -70,9 +70,6 @@ class MergerCommand extends Command
             
             $destinationFile->insertOne($record);
         }
-        /*
-        
-        */
 
         return Command::SUCCESS;
     }
