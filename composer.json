@@ -2,11 +2,17 @@
     "name": "dcorr/merge-dni-from-csv",
     "require": {
         "league/csv": "9.x-dev",
-        "symfony/console": "^6.3"
+        "symfony/console": "^6.3",
+        "symfony/process": "^7.0"
     },
     "autoload": {
         "psr-4": {
             "Dcorr\\MergeDniFromCsv\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dcorr\\MergeDniFromCsv\\Tests\\": "tests/"
         }
     },
     "authors": [

@@ -12,30 +12,31 @@ class DniMerger {
 
 
 
-    public function isDNIColumn($field): bool
+    public function isDniValidable(string $value): bool
     {
-        return 1 === preg_match(self::PATT,$field);
+        return 1 === preg_match(self::PATT,$value);
     }
 
-    public function isNIEColumn($field): bool
+    public function isNieValidable(string $value): bool
     {
-        return 1 === preg_match(self::PATTNIE,$field);
+        return 1 === preg_match(self::PATTNIE,$value);
     }
 
     public function computeChecksumDNI(string $value): string
     {
+        if(!$this->isDniValidable($value)) {
+            return '';
+        }
         return self::CHECKSUM[$value % 23];
     }
 
     public function computeChecksumNIE(string $value): string
     {
+        if(!$this->isNieValidable($value)) {
+            return '';
+        }
         return self::CHECKSUM[strtr($value, 'XYZ', '012') % 23];
     }
 
-
-    public function mergeDni() 
-    {
-
-    }
 
 }

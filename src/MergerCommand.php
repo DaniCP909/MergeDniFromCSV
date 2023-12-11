@@ -15,7 +15,6 @@ use RuntimeException;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
-require 'DniMerger.php';
 
 
 class MergerCommand extends Command
@@ -30,7 +29,7 @@ class MergerCommand extends Command
             ->addArgument('sourcePath', InputArgument::REQUIRED, 'Source file Path')
         ;
         $this
-            ->addOption('destinationPath', null, InputOption::VALUE_REQUIRED, 'Destination file Path', './autogen.csv')
+            ->addOption('destinationPath', null, InputOption::VALUE_REQUIRED, 'Destination file Path', './src/CSVs/auto-gen.csv')
             ->addOption('hasHeader', null, InputOption::VALUE_NONE, 'given CSV has header')
         ;
     }

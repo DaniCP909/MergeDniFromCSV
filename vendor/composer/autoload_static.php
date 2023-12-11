@@ -29,6 +29,7 @@ class ComposerStaticInitefb103b0b4bcdd82c5cf6657baaac6dc
             'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\String\\' => 25,
+            'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Console\\' => 26,
         ),
         'P' => 
@@ -43,6 +44,7 @@ class ComposerStaticInitefb103b0b4bcdd82c5cf6657baaac6dc
         'D' => 
         array (
             'DeepCopy\\' => 9,
+            'Dcorr\\MergeDniFromCsv\\Tests\\' => 28,
             'Dcorr\\MergeDniFromCsv\\' => 22,
         ),
     );
@@ -76,6 +78,10 @@ class ComposerStaticInitefb103b0b4bcdd82c5cf6657baaac6dc
         array (
             0 => __DIR__ . '/..' . '/symfony/string',
         ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
@@ -95,6 +101,10 @@ class ComposerStaticInitefb103b0b4bcdd82c5cf6657baaac6dc
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'Dcorr\\MergeDniFromCsv\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
         ),
         'Dcorr\\MergeDniFromCsv\\' => 
         array (
