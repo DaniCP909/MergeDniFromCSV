@@ -15,6 +15,28 @@ final class DniMergerTest extends TestCase
         $this->dniMerger = new DniMerger();
     }
 
+    public static function dniAndCharProvider() : array
+    {
+        return [
+            ['93726487' => 'S'],
+            ['23456789' => 'D'],
+            ['45678901' => 'G'],
+            ['78901234' => 'X'],
+            ['34' => ''],
+        ];
+    }
+
+    public static function dniAndBooleProvider() : array
+    {
+        return [
+            ['93726487' => true],
+            ['08714737' => true],
+            ['45678901' => true],
+            ['78901234' => true],
+            ['34' => false],
+        ];
+    }
+
     public function testIsDeniColumn() : void
     {
         $this->assertEquals(true, $this->dniMerger->isDniValidable('08714737'));
