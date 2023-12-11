@@ -27,7 +27,7 @@ final class DniMergerTest extends TestCase
         ];
     }
 
-    public static function dniAndBooleProvider() : array
+    public static function dniAndBoolProvider() : array
     {
         return [
             ['93726487' => true],
