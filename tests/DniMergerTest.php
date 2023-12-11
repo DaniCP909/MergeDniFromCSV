@@ -19,32 +19,29 @@ final class DniMergerTest extends TestCase
     public static function dniAndCharProvider() : array
     {
         return [
-            ['93726487' => 'S'],
-            ['23456789' => 'D'],
-            ['45678901' => 'G'],
-            ['78901234' => 'X'],
-            ['34' => ''],
+            ['93726487' , 'S'],
+            ['23456789' , 'D'],
+            ['45678901' , 'G'],
+            ['78901234' , 'X'],
+            ['34' , ''],
         ];
     }
 
     public static function dniAndBoolProvider() : array
     {
         return [
-            ['93726487' => true],
-            ['08714737' => true],
-            ['45678901' => true],
-            ['78901234' => true],
-            ['34' => false],
+            ['93726487', true],
+            ['08714737' , true],
+            ['45678901' , true],
+            ['78901234' , true],
+            ['34' , false],
         ];
     }
 
-    public function testIsDniValidable() : void
+    #[DataProvider('dniAndBoolProvider')]
+    public function testIsDniValidable(string $input, bool $expected) : void
     {
-        $this->assertEquals(true, $this->dniMerger->isDniValidable('08714737'));
-        $this->assertEquals(true, $this->dniMerger->isDniValidable('93726487'));
-        $this->assertEquals(true, $this->dniMerger->isDniValidable('34567890'));
-        $this->assertEquals(false, $this->dniMerger->isDniValidable('7890'));
-        $this->assertEquals(false, $this->dniMerger->isDniValidable(''));
+        $this->assertSame($expected, $this->dniMerger->isDniValidable($input));
     }
 
     public function testIsNieValidable() : void
