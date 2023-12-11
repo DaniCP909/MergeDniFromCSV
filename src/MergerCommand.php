@@ -58,11 +58,11 @@ class MergerCommand extends Command
             }
             
             $selectedColumn = $record[$columnNumber];
-            if($dniMerger->isDNIColumn($selectedColumn)) {
+            if($dniMerger->isDniValidable($selectedColumn)) {
                 $newData = $record[$columnNumber] . $dniMerger->computeChecksumDNI($selectedColumn);
                 $record[] = $newData;
             }
-            else if($dniMerger->isNIEColumn($selectedColumn)) {
+            else if($dniMerger->isNieValidable($selectedColumn)) {
                 $newData = $selectedColumn. $dniMerger->computeChecksumNIE($selectedColumn);
                 $record[] = $newData;
             }
