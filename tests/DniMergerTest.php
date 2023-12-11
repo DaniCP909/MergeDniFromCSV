@@ -4,6 +4,7 @@ namespace Dcorr\MergeDniFromCsv\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Dcorr\MergeDniFromCsv\DniMerger;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 final class DniMergerTest extends TestCase
 {
