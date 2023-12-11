@@ -38,19 +38,27 @@ final class DniMergerTest extends TestCase
         ];
     }
 
+    public static function nieAndBoolProvider() : array
+    {
+        return [
+            ['X3562946', true],
+            ['Y9265937' , true],
+            ['Z5429456' , true],
+            ['78901234' , false],
+            ['34' , false],
+        ];
+    }
+
     #[DataProvider('dniAndBoolProvider')]
     public function testIsDniValidable(string $input, bool $expected) : void
     {
         $this->assertSame($expected, $this->dniMerger->isDniValidable($input));
     }
 
-    public function testIsNieValidable() : void
+    #[DataProvider('nieAndBoolProvider')]
+    public function testIsNieValidable(string $input, bool $expected) : void
     {
-        $this->assertSame(true, $this->dniMerger->isNieValidable('X3562946'));
-        $this->assertSame(true, $this->dniMerger->isNieValidable('Y9265937'));
-        $this->assertSame(true, $this->dniMerger->isNieValidable('Z5429456'));
-        $this->assertSame(false, $this->dniMerger->isNieValidable('93726487'));
-        $this->assertSame(false, $this->dniMerger->isNieValidable(''));
+        $this->assertSame($expected, $this->dniMerger->isNieValidable($input));
     }
 
     public function testComputeDni() : void
