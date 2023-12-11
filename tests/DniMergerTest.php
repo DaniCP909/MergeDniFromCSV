@@ -16,17 +16,6 @@ final class DniMergerTest extends TestCase
         $this->dniMerger = new DniMerger();
     }
 
-    public static function dniAndCharProvider() : array
-    {
-        return [
-            ['93726487' , 'S'],
-            ['23456789' , 'D'],
-            ['45678901' , 'G'],
-            ['78901234' , 'X'],
-            ['34' , ''],
-        ];
-    }
-
     public static function dniAndBoolProvider() : array
     {
         return [
@@ -46,6 +35,29 @@ final class DniMergerTest extends TestCase
             ['Z5429456' , true],
             ['78901234' , false],
             ['34' , false],
+        ];
+    }
+
+    public static function dniAndCharProvider() : array
+    {
+        return [
+            ['93726487' , 'S'],
+            ['23456789' , 'D'],
+            ['45678901' , 'G'],
+            ['78901234' , 'X'],
+            ['34' , ''],
+        ];
+    }
+
+
+    public static function nieAndCharProvider() : array
+    {
+        return [
+            ['X3562946' , 'G'],
+            ['Y9265937' , 'Q'],
+            ['Z5429456' , 'X'],
+            ['78901234' , ''],
+            ['34' , ''],
         ];
     }
 
