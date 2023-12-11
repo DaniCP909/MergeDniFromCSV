@@ -37,7 +37,7 @@ final class DniMergerTest extends TestCase
         ];
     }
 
-    public function testIsDeniColumn() : void
+    public function testIsDniValidable() : void
     {
         $this->assertEquals(true, $this->dniMerger->isDniValidable('08714737'));
         $this->assertEquals(true, $this->dniMerger->isDniValidable('93726487'));
@@ -46,7 +46,7 @@ final class DniMergerTest extends TestCase
         $this->assertEquals(false, $this->dniMerger->isDniValidable(''));
     }
 
-    public function testisNieValidable() : void
+    public function testIsNieValidable() : void
     {
         $this->assertSame(true, $this->dniMerger->isNieValidable('X3562946'));
         $this->assertSame(true, $this->dniMerger->isNieValidable('Y9265937'));
