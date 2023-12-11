@@ -41,8 +41,4 @@ final class DniMergerTest extends TestCase
         $this->assertEquals('', $this->dniMerger->computeChecksumDNI('34'));
     }
 
-    // public function testInvalidIsDeniColumn() : void
-    // {
-
-    // }
 }
