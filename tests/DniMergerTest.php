@@ -53,9 +53,9 @@ final class DniMergerTest extends TestCase
     public static function nieAndCharProvider() : array
     {
         return [
-            ['X3562946' , 'G'],
-            ['Y9265937' , 'Q'],
-            ['Z5429456' , 'X'],
+            ['X3562946' , 'Q'],
+            ['Y9265937' , 'X'],
+            ['Z5429456' , 'N'],
             ['78901234' , ''],
             ['34' , ''],
         ];
@@ -77,6 +77,12 @@ final class DniMergerTest extends TestCase
     public function testComputeDni(string $input, string $expected) : void
     {
         $this->assertEquals($expected, $this->dniMerger->computeChecksumDNI($input));
+    }
+
+    #[DataProvider('nieAndCharProvider')]
+    public function testComputeNie(string $input, string $expected) : void
+    {
+        $this->assertEquals($expected, $this->dniMerger->computeChecksumNIE($input));
     }
 
 }
